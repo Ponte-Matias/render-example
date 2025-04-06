@@ -9,13 +9,9 @@ app = FastAPI()
 async def root():
     return {"message": "Hello World"}
 
-@app.get("/cuenta")
+@app.get("/")
 async def root():
-    a=0
-    for i in range(100):
-        a+=i
-    print(a)
-    return {"message": "Se realizó el cálculo"}    
+    return {("message": "Hello World")*400}
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
