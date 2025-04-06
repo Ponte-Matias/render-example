@@ -11,7 +11,7 @@ async def root():
 
 @app.get("/")
 async def root():
-    return {("message": "Hello World")*400}
+    return {"message": "Hello World"*400}
 
 @app.get("/items/{item_id}")
 def read_item(item_id: int, q: Optional[str] = None):
